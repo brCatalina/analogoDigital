@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/reloj.png");
+    background-size: cover;
+    border: 1rem solid rgb(160, 98, 214);
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 20px 5px rgb(175, 127, 217);
+}
+
+.reloj::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(175, 127, 217);
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+.hora{
+    width: 140px;
+    height: 140px;
+}
+
+.minuto{
+    width: 220px;
+    height: 220px;
+}
+
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+
+.hora::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: rgb(199, 162, 232);
+    z-index: 10;
+    border-radius: 50vh;
+}
+
+.minuto::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background: rgb(175, 127, 217);
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.segundo::before {
+    content:'';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background: rgb(70, 19, 115);
+    z-index: 12;
+    border-radius: 50vh;
+}
+
+.hora, .minuto, .segundo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+
+.relojDigital {
+    border: 0.1rem solid rgb(70, 19, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1rem; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: rgb(70, 19, 115);
+    position: absolute;
+    top: 360px; /* posición vertical,para moverlo más arriba */
+    left: 50%; /* posición horizontal  */
+    transform: translateX(-50%); /* Para centrar horizontalmente */
+}
+
+
